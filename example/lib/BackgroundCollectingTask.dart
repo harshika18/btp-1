@@ -45,14 +45,11 @@ class BackgroundCollectingTask extends Model {
     return op;
   }
   BackgroundCollectingTask._fromConnection(this._connection) {
-    _connection.input.listen((Uint8List data) {
+    _connection.input.listen((data) {
       print('ECG and PPG values: ${ascii.decode(data)}');
-      op=ascii.decode(data);
-      notifyListeners();
-    });
-    _connection.input.listen(null).onDone(() {
+      op = ascii.decode(data);
+    }).onDone(() {
       inProgress = false;
-      notifyListeners();
       print('Disconnected!!!');
     });
   }
