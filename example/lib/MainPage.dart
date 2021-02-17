@@ -170,8 +170,8 @@ class _MainPage extends State<MainPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 SizedBox(height: 10,),
-                Card(color: Colors.deepOrange,elevation: 10,
-                  child: Text("$op   ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24,color: Colors.amberAccent),textAlign: TextAlign.center,),
+                Card(color: Colors.grey,elevation: 10,
+                  child: Text("$op   ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24,color: Colors.black),textAlign: TextAlign.center,),
 
                 ),
               ],
